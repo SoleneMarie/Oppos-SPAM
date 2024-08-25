@@ -15,12 +15,13 @@ form.addEventListener("submit", async (event) => {
     question: question,
     message: message,
   };
-  console.log(data);
+  console.log("le prénom dans mon objet :  " + data.firstName); // jusqu'ici tout va bien
+  console.log("Voici le data que je vais envoyer par main : " + data); // OK, et en plus il arrive sur ma route post...
 
   try {
     const response = await axios.post("http://localhost:3000/contact", data);
-    console.log(response.data);
+    console.log("Voici le data envoyé : " + response.data);
   } catch (error) {
-    console.log(error.response);
+    console.log("erreur provenant de main.js"); // Le catch ci-contre s'enclenche
   }
 });

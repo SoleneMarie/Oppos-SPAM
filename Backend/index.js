@@ -23,6 +23,8 @@ app.post("/contact", async (req, res) => {
       ),
     ];
 
+    console.log(req.body.email); // OK jusque là, pourtant le catch de mon main s'enclenche? alors que le json est parti
+
     const emailParams = new EmailParams()
       .setFrom(sentFrom)
       .setTo(recipients)
@@ -35,14 +37,15 @@ app.post("/contact", async (req, res) => {
         "https://bucket.mailersendapp.com/neqvygmrw5l0p7w2/jpzkmgqmzz1l059v/images/9ccc2eaa-e4a5-434c-961a-bbec6911ba96.jpg",
         "https://bucket.mailersendapp.com/neqvygmrw5l0p7w2/jpzkmgqmzz1l059v/images/9ccc2eab-da87-4f7e-8726-fd1ae93ae020.jpg"
       );
-    console.log(emailParams);
-    const result = await mailerSend.email.send(emailParams); // AIE!
+    const result = await mailerSend.email.send(emailParams);
     return res.status(200).json({ result });
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res
+      .status(500)
+      .json({ message: "erreur 500 provenant de index.js" }); // ne s'enclenche pas
   }
 });
 
 app.listen(3000, () => {
-  console.log("server Ok");
+  console.log("server Ok"); // OK!
 });
