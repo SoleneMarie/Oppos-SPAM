@@ -1,0 +1,134 @@
+body {
+  background-color: lightseagreen;
+}
+header {
+  position: sticky;
+  top: 0px;
+}
+
+.band {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: lightseagreen;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: monospace;
+}
+.band .container {
+  background-color: lightseagreen;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  border-radius: 15%;
+}
+
+header .container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opposspam {
+  display: flex;
+  align-items: center;
+}
+
+.opposspam img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.opposspam span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.complain {
+  font-size: 16px;
+}
+
+.complain a {
+  text-decoration: none;
+  color: brown;
+}
+
+main {
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+}
+main .container {
+  flex-direction: column;
+  padding: 60px;
+  align-items: center;
+}
+main h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+main p {
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.explain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explain img {
+  height: 120px;
+  margin-left: 20px;
+}
+
+.form {
+  width: 60%;
+  padding: 20px;
+  font-size: 18px;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+#contact input {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
+  background-color: lightgray;
+  margin-bottom: 16px;
+}
+#contact button {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  border-radius: 50%;
+  background-color: lightseagreen;
+  width: 160px;
+  height: 120px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+#contact button:hover {
+  cursor: pointer;
+}
+
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 14px;
+}
+footer img {
+  height: 80px;
+}
